@@ -71,6 +71,13 @@
             function veer(e){ // this is actualargument
                 e.preventDefault();
                     console.log("hello veer");
+                    // I want to access form data here...
+                    // on which element this event is happening ? input event
+                    // travesing up 
+                    console.log(e.target.closest('form'));
+
+                    // travesing down
+                    console.log(e.target.closest('form').querySelector('input:first-child').value);
             }
         </script>
     </body>
